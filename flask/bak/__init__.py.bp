@@ -1,0 +1,10 @@
+# __init__.py
+from flask import Flask
+from .routes import bp  # Import the Blueprint 'bp' from routes module
+
+app = Flask(__name__)
+# 블루프린트
+app.register_blueprint(bp)  # Register the Blueprint
+
+if __name__ == '__main__':
+    app.run(debug=True)
